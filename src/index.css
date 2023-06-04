@@ -11,4 +11,8 @@
   .card {
     @apply w-full bg-white rounded-md shadow-md p-4 flex flex-col gap-4 md:flex-row md:justify-between md:gap-0 relative;
   }
+
+  .remove-filter {
+    @apply bg-primary px-1 text-white transition-all hover:bg-primary-700;
+  }
 }

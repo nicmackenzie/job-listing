@@ -7,6 +7,7 @@ import NewJob from './pages/NewJob';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import './index.css';
+import { AppProvider } from './context/app-context';
 
 // APP ROUTES
 // for clarification on how to create routes in version 6,click👉 https://reactrouter.com/en/main/start/tutorial
@@ -36,6 +37,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AppProvider>
+      <RouterProvider router={router} />
+    </AppProvider>
   </React.StrictMode>
 );

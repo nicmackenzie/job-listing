@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "start:server": "json-server --watch db.json -p 8001",
-    "start": "concurrently npm:start:*",
+    "start": " npm:start:*",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -21,7 +21,6 @@
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^4.0.0",
     "autoprefixer": "^10.4.14",
-    "concurrently": "^8.1.0",
     "eslint": "^8.38.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",

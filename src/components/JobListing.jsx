@@ -1,7 +1,7 @@
 import React from 'react'
 import Listing from './Listing'
 
-function JobListing({jobs}) {
+function JobListing({jobs,onAddFilter}) {
   console.log(jobs)
   return (
     <div>

@@ -1,4 +1,5 @@
 import { useState, useEffect, createContext } from 'react';
+import JobListing from '../components/JobListing';
 
 const AppContext = createContext({
   jobListings: [],
@@ -29,7 +30,9 @@ const AppProvider = ({ children }) => {
   return (
     <AppContext.Provider value={{ jobListings, users, userDetails, onLogin }}>
       {children}
+      <JobListing jobs={jobListings}/>
     </AppContext.Provider>
+   
   );
 };
 

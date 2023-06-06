@@ -1,8 +1,14 @@
 import React from 'react'
+import Listing from './Listing'
 
-function JobListing() {
+function JobListing({jobs}) {
+  console.log(jobs)
   return (
-    <div>JobListing</div>
+    <div>
+      {jobs.map((job)=>{
+        return <Listing key={job.id} job={job}/>
+      })}
+    </div>
   )
 }
 

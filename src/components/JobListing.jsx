@@ -1,11 +1,13 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import Listing from './Listing'
+import { AppContext } from '../context/app-context'
 
-function JobListing({jobs,onAddFilter}) {
-  console.log(jobs)
+function JobListing() {
+  // console.log(jobs)
+ const {jobListings}= useContext(AppContext)
   return (
     <div>
-      {jobs.map((job)=>{
+      {jobListings.map((job)=>{
         return <Listing key={job.id} job={job}/>
       })}
     </div>

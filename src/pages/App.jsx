@@ -1,5 +1,8 @@
+import JobListing from "../components/JobListing";
 function App() {
-  return <></>;
+  return <>
+  <JobListing />
+  </>;
 }
 
 export default App;

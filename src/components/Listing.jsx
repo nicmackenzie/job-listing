@@ -2,6 +2,9 @@ import React from 'react'
 
 function Listing({job}) {
   
+  function handleClick(e){
+    console.log(e.target)
+  }
   return (
     <div className="">
 <img src={job.logo} alt="company logo"/>
@@ -9,18 +12,18 @@ function Listing({job}) {
   <p>{job.company}</p>
   </div>
       <div>
-      <h4>{job.position}</h4>
+      <h3>{job.position}</h3>
       </div>
           <div>
             <p>{job.postedAt}</p>
             <p>{job.contract}</p>
-            <p>{job.locaion}</p>
+            <p>{job.location}</p>
           </div>
-              <div>
-                <button>{job.role}</button>
-                <button>{job.level}</button>
+              <div >
+                <button onClick={handleClick}>{job.role}</button>
+                <button onClick={handleClick}>{job.level}</button>
                 {job.languages.map((language)=>{
-                  return <button key={language}>{language}</button>
+                  return <button onClick={handleClick} key={language}>{language}</button>
                 })}
               </div>
     </div>

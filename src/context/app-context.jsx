@@ -45,7 +45,6 @@ const AppProvider = ({ children }) => {
       value={{ jobListings, users, userDetails, onLogin, onAddFilter, filters }}
     >
       {children}
-      <JobListing jobs={jobListings}/>
     </AppContext.Provider>
    
   );

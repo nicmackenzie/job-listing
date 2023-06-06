@@ -6,24 +6,28 @@ function Listing({job}) {
     console.log(e.target)
   }
   return (
-    <div className="">
-<img src={job.logo} alt="company logo"/>
-  <div className="">
-  <p>{job.company}</p>
+    <div className="card">
+      <div className="flex gap-4 items-center">
+<img src={job.logo} alt="company logo" className="w-14 h-14 rounded-full"/>
+  <div className="flex flex-col gap-1 mt-5 lg:mt-0">
+    <div className="flex gap-1 items-center">
+  <p className="text-primary text-[12px]">{job.company}</p>
   </div>
       <div>
-      <h3>{job.position}</h3>
+      <p className="text-primary text-[15px] font-bold">{job.position}</p>
       </div>
-          <div>
-            <p>{job.postedAt}</p>
-            <p>{job.contract}</p>
-            <p>{job.location}</p>
+          <div className="flex items-center gap-4 text-[12px] text-primary-600">
+            <div>{job.postedAt}</div>
+            <div>{job.contract}</div>
+            <div>{job.location}</div>
           </div>
-              <div >
-                <button onClick={handleClick}>{job.role}</button>
-                <button onClick={handleClick}>{job.level}</button>
+        </div>
+      </div>
+              <div className="flex gap-2 items-center flex-wrap" >
+                <span onClick={handleClick} className="filter-pills role">{job.role}</span>
+                <span onClick={handleClick} className="filter-pills level">{job.level}</span>
                 {job.languages.map((language)=>{
-                  return <button onClick={handleClick} key={language}>{language}</button>
+                  return <span onClick={handleClick} className="filter-pills language" key={language}>{language}</span>
                 })}
               </div>
     </div>

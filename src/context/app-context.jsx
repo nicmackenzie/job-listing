@@ -30,7 +30,6 @@ const AppProvider = ({ children }) => {
   return (
     <AppContext.Provider value={{ jobListings, users, userDetails, onLogin }}>
       {children}
-      <JobListing jobs={jobListings}/>
     </AppContext.Provider>
    
   );

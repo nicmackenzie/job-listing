@@ -5,12 +5,15 @@ const AppContext = createContext({
   users: [],
   userDetails: {},
   onLogin: () => {},
+  filters: [],
+  onAddFilter: () => {},
 });
 
 const AppProvider = ({ children }) => {
   const [jobListings, setJobListings] = useState([]);
   const [users, setUsers] = useState([]);
   const [userDetails, setUserDetails] = useState();
+  const [filters, setFilters] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:8001/jobs')
@@ -26,8 +29,20 @@ const AppProvider = ({ children }) => {
     setUserDetails(user);
   };
 
+  const onAddFilter = filter => {
+    setFilters(state => {
+      if (state.includes(filter)) {
+        return state;
+      } else {
+        return [...state, filter];
+      }
+    });
+  };
+
   return (
-    <AppContext.Provider value={{ jobListings, users, userDetails, onLogin }}>
+    <AppContext.Provider
+      value={{ jobListings, users, userDetails, onLogin, onAddFilter, filters }}
+    >
       {children}
     </AppContext.Provider>
   );

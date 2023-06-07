@@ -3,7 +3,7 @@
 // Will be used to display our navigation. **
 
 
-      // ?Log In & out
+      // ?authentication
 // Will receive isLoggedIn(boolean) and filters(array) props from <App />
 // Will render the navigation based on user login status as below
 // If user not logged in, have two links. One for log in and the other for sign up.

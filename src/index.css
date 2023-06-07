@@ -39,4 +39,16 @@
   .btn-full {
     @apply w-full;
   }
+
+  .filter-container {
+    @apply h-12 mt-2 flex items-center gap-2 flex-wrap px-4 md:px-6 bg-white rounded-sm shadow-lg;
+  }
+
+  .filter-container div {
+    @apply flex items-center flex-wrap gap-2;
+  }
+
+  .clear-button {
+    @apply text-[15px] ml-auto text-primary-600 transition-all hover:underline hover:text-primary;
+  }
 }

@@ -79,6 +79,7 @@ function RegisterForm({ onSubmitHandler }) {
     onSubmitHandler({
       email: formData.email.value,
       password: formData.password.value,
+      role: formData.role.value,
     });
   };
   return (

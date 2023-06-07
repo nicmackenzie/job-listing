@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { AppContext } from '../context/app-context';
 
 function Listing({ job }) {
@@ -7,7 +8,10 @@ function Listing({ job }) {
     onAddFilter(e.target.textContent);
   };
   return (
-    <div className="card">
+    <Link
+      className="card transition-all hover:scale-105"
+      to={'/jobs/' + job.id}
+    >
       <div className="flex gap-4 items-center">
         <img
           src={job.logo}
@@ -44,7 +48,7 @@ function Listing({ job }) {
           </span>
         ))}
       </div>
-    </div>
+    </Link>
   );
 }
 

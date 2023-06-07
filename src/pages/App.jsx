@@ -11,5 +11,5 @@ function App() {
       <JobListing />
     </>
   );
-
+}
 export default App;

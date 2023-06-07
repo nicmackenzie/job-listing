@@ -23,9 +23,11 @@ import Navbar from '../navbar/Navbar';
 function Header() {
   return (
     <header className="-full h-36 bg-primary p-4">
-      <Navbar  />
-    </header>
+      <Navbar user={user}/>
+      {/* {Filters.length > 0 && <Filters filter={filters} onclear={onClear}/>} */}
+      {/* after this we will render the search and filters component once they finish working on them */}   
+       </header>
   );
-}
+  }
 
 export default Header;

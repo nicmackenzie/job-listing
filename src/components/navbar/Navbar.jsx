@@ -53,7 +53,16 @@ function Navbar({ user }) {
                 Register
               </Link>
             </li>
-           
+            {user && user.role === 'employer' && (
+          <li>
+            <Link
+              className="text-white font-semibold text-lg transition-all hover:text-primary-700"
+              to="/jobs/new"
+            >
+              New Job
+            </Link>
+          </li>
+        )}
 
           </div>
         )}

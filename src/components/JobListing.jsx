@@ -6,8 +6,8 @@ function JobListing() {
   // console.log(jobs)
  const {jobListings}= useContext(AppContext)
   return (
-    <div className=' flex flex-col gap-2'>
-      {jobListings.map((job)=>{
+    <div>
+      {jobs.map((job)=>{
         return <Listing key={job.id} job={job}/>
       })}
     </div>

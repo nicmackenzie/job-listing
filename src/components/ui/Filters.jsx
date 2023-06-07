@@ -7,7 +7,7 @@ function Filters({ filters, onClear }) {
         <div>
       {filters.map((filter => <Filter key={filter} filter={filter} /> ))}
       </div>
-        <button onClick={() => onClear()}> Clear</button>
+        <button className="clear-button" onClick={() => onClear()}> Clear</button>
     </div>
   )
 }

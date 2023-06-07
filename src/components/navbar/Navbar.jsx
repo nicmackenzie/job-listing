@@ -26,7 +26,15 @@ function Navbar({ user }) {
 
     <nav className="flex">
       <ul className="flex gap-4 items-center justify-between w-full">
-        
+      <div className='flex gap-4 items-center'>
+          {
+            links.map(link => (
+              <li key={link.name}>
+                <Link to={link.link}>{link.name}</Link>
+              </li>
+            ))
+          }
+         </div>
         {!user && (
           <div className='flex gap-4'>
             <li>
@@ -53,6 +61,7 @@ function Navbar({ user }) {
     </nav>
   );
 }
+
 
 export default Navbar;
 

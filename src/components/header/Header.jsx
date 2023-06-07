@@ -18,7 +18,7 @@
 
 
 import Navbar from '../navbar/Navbar';
-import Filters from '../ui/Filters.jsx'
+// import Filters from '../ui/Filters.jsx'
 
 function Header() {
   return (

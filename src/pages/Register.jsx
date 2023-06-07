@@ -4,7 +4,7 @@ import RegisterForm from '../components/register/RegisterForm';
 import { AppContext } from '../context/app-context';
 
 function Register() {
-  const { users } = useContext(AppContext);
+  const { users, onLogin } = useContext(AppContext);
   const [error, setError] = useState({ hasError: false, errorMsg: '' });
   const navigate = useNavigate();
 
@@ -17,6 +17,7 @@ function Register() {
     }
 
     // to do allow user to automatically be logedin after register
+    onLogin(data);
     navigate('/');
   };
   return (

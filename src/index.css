@@ -16,6 +16,10 @@
     @apply bg-primary px-1 text-white transition-all hover:bg-primary-700;
   }
 
+  .form-control {
+    @apply flex flex-col gap-1 mb-3;
+  }
+
   .form-label {
     @apply text-sm text-primary-700 font-semibold;
   }

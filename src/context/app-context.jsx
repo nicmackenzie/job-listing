@@ -8,6 +8,7 @@ const AppContext = createContext({
   filters: [],
   onAddFilter: () => {},
   onAddJob: () => {},
+  onClearFilters: () => {},
 });
 
 const AppProvider = ({ children }) => {
@@ -44,6 +45,10 @@ const AppProvider = ({ children }) => {
     setJobListings(state => [job, ...state]);
   };
 
+  const onClearFilters = () => {
+    setFilters([]);
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -54,6 +59,7 @@ const AppProvider = ({ children }) => {
         onAddFilter,
         filters,
         onAddJob,
+        onClearFilters,
       }}
     >
       {children}

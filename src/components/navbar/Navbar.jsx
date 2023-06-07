@@ -16,7 +16,7 @@ function Navbar({ user }) {
             </li>
             <li>
               <Link
-                to="/login"
+                to="/register"
                 className="text-white font-semibold text-lg transition-all hover:text-primary-700"
               >
                 Register

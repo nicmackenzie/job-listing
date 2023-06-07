@@ -1,5 +1,4 @@
 import { useState, useEffect, createContext } from 'react';
-import JobListing from '../components/JobListing';
 
 const AppContext = createContext({
   jobListings: [],
@@ -10,6 +9,7 @@ const AppContext = createContext({
   onAddFilter: () => {},
   onAddJob: () => {},
   onClearFilters: () => {},
+  onClearFilter: () => {},
 });
 
 const AppProvider = ({ children }) => {
@@ -50,6 +50,13 @@ const AppProvider = ({ children }) => {
     setFilters([]);
   };
 
+  const onClearFilter = filter => {
+    const i = filters.findIndex(elm => elm === filter);
+    const clonedFilters = [...filters];
+    clonedFilters.splice(i, 1);
+    setFilters(clonedFilters);
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -61,11 +68,11 @@ const AppProvider = ({ children }) => {
         filters,
         onAddJob,
         onClearFilters,
+        onClearFilter,
       }}
     >
       {children}
     </AppContext.Provider>
-   
   );
 };
 

@@ -1,11 +1,16 @@
 import { Link } from 'react-router-dom';
 
+
+
 function Navbar({ user }) {
+
   return (
-    <nav className="flex justify-end">
-      <ul className="flex gap-4 items-center">
+
+    <nav className="flex">
+      <ul className="flex gap-4 items-center justify-between w-full">
+        
         {!user && (
-          <>
+          <div className='flex gap-4'>
             <li>
               <Link
                 to="/login"
@@ -22,15 +27,9 @@ function Navbar({ user }) {
                 Register
               </Link>
             </li>
-          </>
-        )}
-        {user && user.role === 'employer' && (
-          <Link
-            className="text-white font-semibold text-lg transition-all hover:text-primary-700"
-            to="/jobs/new"
-          >
-            New Job
-          </Link>
+           
+
+          </div>
         )}
       </ul>
     </nav>
@@ -38,3 +37,9 @@ function Navbar({ user }) {
 }
 
 export default Navbar;
+
+
+
+
+
+

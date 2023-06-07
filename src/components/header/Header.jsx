@@ -18,12 +18,12 @@
 
 
 import Navbar from '../navbar/Navbar';
+import Filters from '../ui/Filters.jsx'
 
-function Header({ user, filters }) {
+function Header() {
   return (
     <header className="-full h-36 bg-primary p-4">
-      <Navbar user={user} />
-      {/* after this we will render the search and filters component once they finish working on them */}
+      <Navbar  />
     </header>
   );
 }

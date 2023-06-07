@@ -1,15 +1,19 @@
-import React from 'react';
 import Filter from './Filter';
 
 function Filters({ filters, onClear }) {
   return (
     <div className="filters-container">
-        <div>
-      {filters.map((filter => <Filter key={filter} filter={filter} /> ))}
+      <div>
+        {filters.map(filter => (
+          <Filter key={filter} filter={filter} />
+        ))}
       </div>
-        <button className="clear-button" onClick={() => onClear()}> Clear</button>
+      <button className="clear-button" onClick={() => onClear()}>
+        {' '}
+        Clear
+      </button>
     </div>
-  )
+  );
 }
 
 export default Filters;

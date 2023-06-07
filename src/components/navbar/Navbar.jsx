@@ -1,5 +1,23 @@
 import { Link } from 'react-router-dom';
 
+const links = [
+{
+  name: 'Home',
+  link: '/home'
+ },
+ {
+  name: 'About',
+  link: '/about'
+ },
+ {
+  name: 'Contact',
+  link: '/contact'
+ },
+ {
+  name: 'Blog',
+  link: '/blog'
+ }
+]
 
 
 function Navbar({ user }) {

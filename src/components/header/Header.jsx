@@ -16,10 +16,10 @@
 import Navbar from '../navbar/Navbar';
 import Filters from '../ui/Filters.jsx';
 
-function Header({ user, filters, onClear }) {
+function Header({ user, filters, onClear, onLogout }) {
   return (
     <header className="-full h-36 bg-primary p-4">
-      <Navbar user={user} />
+      <Navbar user={user} onLogout={onLogout} />
       {filters.length > 0 && <Filters filters={filters} onclear={onClear} />}
       {/* after this we will render the search and filters component once they finish working on them */}
     </header>

@@ -10,6 +10,7 @@ const AppContext = createContext({
   onAddJob: () => {},
   onClearFilters: () => {},
   onClearFilter: () => {},
+  onLogout: () => {},
 });
 
 const AppProvider = ({ children }) => {
@@ -57,6 +58,10 @@ const AppProvider = ({ children }) => {
     setFilters(clonedFilters);
   };
 
+  const onLogout = () => {
+    setUserDetails(null);
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -69,6 +74,7 @@ const AppProvider = ({ children }) => {
         onAddJob,
         onClearFilters,
         onClearFilter,
+        onLogout,
       }}
     >
       {children}

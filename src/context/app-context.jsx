@@ -1,4 +1,5 @@
 import { useState, useEffect, createContext } from 'react';
+import JobListing from '../components/JobListing';
 
 const AppContext = createContext({
   jobListings: [],
@@ -7,6 +8,8 @@ const AppContext = createContext({
   onLogin: () => {},
   filters: [],
   onAddFilter: () => {},
+  onAddJob: () => {},
+  onClearFilters: () => {},
 });
 
 const AppProvider = ({ children }) => {
@@ -39,12 +42,30 @@ const AppProvider = ({ children }) => {
     });
   };
 
+  const onAddJob = job => {
+    setJobListings(state => [job, ...state]);
+  };
+
+  const onClearFilters = () => {
+    setFilters([]);
+  };
+
   return (
     <AppContext.Provider
-      value={{ jobListings, users, userDetails, onLogin, onAddFilter, filters }}
+      value={{
+        jobListings,
+        users,
+        userDetails,
+        onLogin,
+        onAddFilter,
+        filters,
+        onAddJob,
+        onClearFilters,
+      }}
     >
       {children}
     </AppContext.Provider>
+   
   );
 };
 

@@ -1,9 +1,9 @@
-import React from 'react'
-
+import React,{useContext} from 'react'
+import { AppContext } from '../context/app-context'
 function Listing({job}) {
-  
+  const {onAddFilter}=useContext(AppContext)
   function handleClick(e){
-    console.log(e.target)
+    onAddFilter(e.target.textContent)
   }
   return (
     <div className="card">

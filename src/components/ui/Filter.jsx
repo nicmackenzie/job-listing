@@ -1,15 +1,13 @@
-
-import React from 'react'
-
 function Filter({ filter }) {
   return (
-    <div>
-      <h3>Filters</h3>
-      {filter.map((filter, id) => {
-        <Filter key={id} filter={filter} />
-      })}
+    <div className="flex">
+      <div className="bg-primary-200 text-primary text-small flex items-center px-1">
+        {filter}
+      </div>
+      <button className="remove-filter">&times;</button>
     </div>
-  )
+  );
 }
 
-export default Filter
+export default Filter;
+

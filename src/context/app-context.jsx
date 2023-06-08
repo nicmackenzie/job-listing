@@ -9,6 +9,10 @@ const AppContext = createContext({
   onAddFilter: () => {},
   onAddJob: () => {},
   onClearFilters: () => {},
+  onClearFilter: () => {},
+  onLogout: () => {},
+  searchTerm: '',
+  onSearch: () => {},
 });
 
 const AppProvider = ({ children }) => {
@@ -16,6 +20,7 @@ const AppProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
   const [userDetails, setUserDetails] = useState();
   const [filters, setFilters] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     fetch('http://localhost:8001/jobs')
@@ -49,10 +54,45 @@ const AppProvider = ({ children }) => {
     setFilters([]);
   };
 
+  const onClearFilter = filter => {
+    const i = filters.findIndex(elm => elm === filter);
+    const clonedFilters = [...filters];
+    clonedFilters.splice(i, 1);
+    setFilters(clonedFilters);
+  };
+
+  const onLogout = () => {
+    setUserDetails(null);
+  };
+
+  const onSearch = word => {
+    setSearchTerm(word);
+  };
+
+  const searchedJobs = jobListings.filter(job =>
+    job.position.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const filteredJobs = searchedJobs.filter(job => {
+    let count = 0;
+    for (let i = 0; i < filters.length; i++) {
+      if (
+        job.languages.includes(filters[i]) ||
+        job.role === filters[i] ||
+        job.level === filters[i]
+      ) {
+        count++;
+      }
+    }
+    if (filters.length == count) {
+      return job;
+    }
+  });
+
   return (
     <AppContext.Provider
       value={{
-        jobListings,
+        jobListings: filteredJobs,
         users,
         userDetails,
         onLogin,
@@ -60,6 +100,10 @@ const AppProvider = ({ children }) => {
         filters,
         onAddJob,
         onClearFilters,
+        onClearFilter,
+        onLogout,
+        onSearch,
+        searchTerm,
       }}
     >
       {children}

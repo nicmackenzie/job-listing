@@ -3,7 +3,7 @@
     {
       "id": 1,
       "company": "Photosnap",
-      "logo": "./images/photosnap.svg",
+      "logo": "/images/photosnap.svg",
       "new": true,
       "featured": true,
       "position": "Senior Frontend Developer",
@@ -14,12 +14,32 @@
       "location": "USA Only",
       "languages": ["HTML", "CSS", "JavaScript"],
       "tools": [],
-      "likedBy": []
+      "likedBy": [],
+      "salary": "Competitive salary",
+      "dutiesAndRoles": [
+        "Develop and maintain the frontend of web applications using HTML, CSS, and JavaScript.",
+        "Collaborate with designers and backend developers to implement user-friendly interfaces.",
+        "Optimize web applications for maximum speed and scalability.",
+        "Debug and fix frontend issues and bugs."
+      ],
+      "qualifications": [
+        "Bachelor's degree in Computer Science or a related field (or equivalent work experience)."
+      ],
+      "skillsRequired": [
+        "Proficient in HTML, CSS, and JavaScript.",
+        "Strong understanding of frontend frameworks and libraries.",
+        "Experience with responsive design and cross-browser compatibility.",
+        "Familiarity with version control systems."
+      ],
+      "requiredExperienceAndKnowledge": [
+        "Minimum X years of experience as a frontend developer.",
+        "Proven track record of delivering high-quality frontend solutions."
+      ]
     },
     {
       "id": 2,
       "company": "Manage",
-      "logo": "./images/manage.svg",
+      "logo": "/images/manage.svg",
       "new": true,
       "featured": true,
       "position": "Fullstack Developer",
@@ -30,12 +50,32 @@
       "location": "Remote",
       "languages": ["Python"],
       "tools": ["React"],
-      "likedBy": []
+      "likedBy": [],
+      "salary": "Competitive salary",
+      "dutiesAndRoles": [
+        "Develop and maintain both frontend and backend components of web applications.",
+        "Collaborate with cross-functional teams to design and implement scalable solutions.",
+        "Write efficient and clean code using Python and React.",
+        "Implement and integrate APIs and third-party services."
+      ],
+      "qualifications": [
+        "Bachelor's degree in Computer Science or a related field (or equivalent work experience)."
+      ],
+      "skillsRequired": [
+        "Proficient in Python for backend development.",
+        "Experience with frontend development using React.",
+        "Familiarity with databases and SQL.",
+        "Strong problem-solving and analytical skills."
+      ],
+      "requiredExperienceAndKnowledge": [
+        "Minimum X years of experience as a fullstack developer.",
+        "Demonstrated ability to work on complex web applications."
+      ]
     },
     {
       "id": 3,
       "company": "Account",
-      "logo": "./images/account.svg",
+      "logo": "/images/account.svg",
       "new": true,
       "featured": false,
       "position": "Junior Frontend Developer",
@@ -46,12 +86,32 @@
       "location": "USA Only",
       "languages": ["JavaScript"],
       "tools": ["React", "Sass"],
-      "likedBy": []
+      "likedBy": [],
+      "salary": "Competitive salary",
+      "dutiesAndRoles": [
+        "Assist in developing and maintaining frontend components of web applications.",
+        "Collaborate with senior developers to implement user interfaces.",
+        "Write clean and efficient code using JavaScript, React, and Sass.",
+        "Participate in code reviews and debugging activities."
+      ],
+      "qualifications": [
+        "Bachelor's degree in Computer Science or a related field (or equivalent work experience)."
+      ],
+      "skillsRequired": [
+        "Proficient in JavaScript for frontend development.",
+        "Knowledge of frontend frameworks, particularly React.",
+        "Experience with CSS preprocessors like Sass.",
+        "Strong attention to detail and ability to work in a team."
+      ],
+      "requiredExperienceAndKnowledge": [
+        "Some experience or internships in frontend development.",
+        "Familiarity with version control systems like Git."
+      ]
     },
     {
       "id": 4,
       "company": "MyHome",
-      "logo": "./images/myhome.svg",
+      "logo": "/images/myhome.svg",
       "new": false,
       "featured": false,
       "position": "Junior Frontend Developer",
@@ -62,12 +122,32 @@
       "location": "USA Only",
       "languages": ["CSS", "JavaScript"],
       "tools": [],
-      "likedBy": []
+      "likedBy": [],
+      "salary": "Competitive salary",
+      "dutiesAndRoles": [
+        "Assist in the development and maintenance of frontend components of web applications.",
+        "Collaborate with the development team to implement user interfaces.",
+        "Write clean and efficient code using CSS and JavaScript.",
+        "Fix frontend issues and bugs as required."
+      ],
+      "qualifications": [
+        "Bachelor's degree in Computer Science or a related field (or equivalent work experience)."
+      ],
+      "skillsRequired": [
+        "Proficient in CSS and JavaScript.",
+        "Familiarity with frontend development practices.",
+        "Basic understanding of version control systems.",
+        "Strong problem-solving skills and attention to detail."
+      ],
+      "requiredExperienceAndKnowledge": [
+        "Some experience or internships in frontend development.",
+        "Passion for learning and growing as a frontend developer."
+      ]
     },
     {
       "id": 5,
       "company": "Loop Studios",
-      "logo": "./images/loop-studios.svg",
+      "logo": "/images/loop-studios.svg",
       "new": false,
       "featured": false,
       "position": "Software Engineer",
@@ -78,12 +158,32 @@
       "location": "Worldwide",
       "languages": ["JavaScript"],
       "tools": ["Ruby", "Sass"],
-      "likedBy": []
+      "likedBy": [],
+      "salary": "Competitive salary",
+      "dutiesAndRoles": [
+        "Develop and maintain software applications and systems.",
+        "Collaborate with cross-functional teams to design and implement features.",
+        "Write clean, efficient, and scalable code using JavaScript and Ruby.",
+        "Participate in code reviews and testing activities."
+      ],
+      "qualifications": [
+        "Bachelor's degree in Computer Science or a related field (or equivalent work experience)."
+      ],
+      "skillsRequired": [
+        "Proficient in JavaScript for frontend and backend development.",
+        "Familiarity with Ruby and Ruby on Rails (RoR).",
+        "Experience with CSS preprocessors like Sass.",
+        "Strong problem-solving and analytical skills."
+      ],
+      "requiredExperienceAndKnowledge": [
+        "Minimum X years of experience as a software engineer.",
+        "Demonstrated ability to work on complex software projects."
+      ]
     },
     {
       "id": 6,
       "company": "FaceIt",
-      "logo": "./images/faceit.svg",
+      "logo": "/images/faceit.svg",
       "new": false,
       "featured": false,
       "position": "Junior Backend Developer",
@@ -94,12 +194,32 @@
       "location": "UK Only",
       "languages": ["Ruby"],
       "tools": ["RoR"],
-      "likedBy": []
+      "likedBy": [],
+      "salary": "Competitive salary",
+      "dutiesAndRoles": [
+        "Assist in developing and maintaining backend components of web applications.",
+        "Collaborate with senior developers to implement backend functionalities.",
+        "Write clean and efficient code using Ruby and Ruby on Rails (RoR).",
+        "Participate in code reviews and testing activities."
+      ],
+      "qualifications": [
+        "Bachelor's degree in Computer Science or a related field (or equivalent work experience)."
+      ],
+      "skillsRequired": [
+        "Proficient in Ruby for backend development.",
+        "Familiarity with Ruby on Rails (RoR) framework.",
+        "Knowledge of RESTful APIs and web services.",
+        "Strong problem-solving and debugging skills."
+      ],
+      "requiredExperienceAndKnowledge": [
+        "Some experience or internships in backend development.",
+        "Basic understanding of databases and SQL."
+      ]
     },
     {
       "id": 7,
       "company": "Shortly",
-      "logo": "./images/shortly.svg",
+      "logo": "/images/shortly.svg",
       "new": false,
       "featured": false,
       "position": "Junior Developer",
@@ -110,12 +230,32 @@
       "location": "Worldwide",
       "languages": ["HTML", "JavaScript"],
       "tools": ["Sass"],
-      "likedBy": []
+      "likedBy": [],
+      "salary": "Competitive salary",
+      "dutiesAndRoles": [
+        "Assist in developing and maintaining frontend components of web applications.",
+        "Collaborate with the development team to implement user interfaces.",
+        "Write clean and efficient code using HTML, JavaScript, and Sass.",
+        "Fix frontend issues and bugs as required."
+      ],
+      "qualifications": [
+        "Bachelor's degree in Computer Science or a related field (or equivalent work experience)."
+      ],
+      "skillsRequired": [
+        "Proficient in HTML and JavaScript.",
+        "Familiarity with frontend frameworks and libraries.",
+        "Experience with CSS preprocessors like Sass.",
+        "Strong problem-solving skills and attention to detail."
+      ],
+      "requiredExperienceAndKnowledge": [
+        "Some experience or internships in frontend development.",
+        "Passion for learning and growing as a frontend developer."
+      ]
     },
     {
       "id": 8,
       "company": "Insure",
-      "logo": "./images/insure.svg",
+      "logo": "/images/insure.svg",
       "new": false,
       "featured": false,
       "position": "Junior Frontend Developer",
@@ -126,12 +266,32 @@
       "location": "USA Only",
       "languages": ["JavaScript"],
       "tools": ["Vue", "Sass"],
-      "likedBy": []
+      "likedBy": [],
+      "salary": "Competitive salary",
+      "dutiesAndRoles": [
+        "Assist in developing and maintaining frontend components of web applications.",
+        "Collaborate with the development team to implement user interfaces.",
+        "Write clean and efficient code using JavaScript, Vue, and Sass.",
+        "Fix frontend issues and bugs as required."
+      ],
+      "qualifications": [
+        "Bachelor's degree in Computer Science or a related field (or equivalent work experience)."
+      ],
+      "skillsRequired": [
+        "Proficient in JavaScript for frontend development.",
+        "Familiarity with frontend frameworks, particularly Vue.",
+        "Experience with CSS preprocessors like Sass.",
+        "Strong problem-solving skills and attention to detail."
+      ],
+      "requiredExperienceAndKnowledge": [
+        "Some experience or internships in frontend development.",
+        "Passion for learning and growing as a frontend developer."
+      ]
     },
     {
       "id": 9,
       "company": "Eyecam Co.",
-      "logo": "./images/eyecam-co.svg",
+      "logo": "/images/eyecam-co.svg",
       "new": false,
       "featured": false,
       "position": "Full Stack Engineer",
@@ -142,12 +302,32 @@
       "location": "Worldwide",
       "languages": ["JavaScript", "Python"],
       "tools": ["Django"],
-      "likedBy": []
+      "likedBy": [],
+      "salary": "Competitive salary",
+      "dutiesAndRoles": [
+        "Design and develop full-stack web applications and systems.",
+        "Collaborate with cross-functional teams to implement features and functionalities.",
+        "Write clean, efficient, and scalable code using JavaScript and Python (Django).",
+        "Participate in code reviews and testing activities."
+      ],
+      "qualifications": [
+        "Bachelor's degree in Computer Science or a related field (or equivalent work experience)."
+      ],
+      "skillsRequired": [
+        "Proficient in JavaScript and Python for frontend and backend development.",
+        "Familiarity with the Django framework.",
+        "Experience with frontend technologies like HTML, CSS, and JavaScript frameworks.",
+        "Strong problem-solving and analytical skills."
+      ],
+      "requiredExperienceAndKnowledge": [
+        "Minimum X years of experience as a full-stack engineer.",
+        "Demonstrated ability to work on complex software projects."
+      ]
     },
     {
       "id": 10,
       "company": "The Air Filter Company",
-      "logo": "./images/the-air-filter-company.svg",
+      "logo": "/images/the-air-filter-company.svg",
       "new": false,
       "featured": false,
       "position": "Front-end Dev",
@@ -158,7 +338,27 @@
       "location": "Worldwide",
       "languages": ["JavaScript"],
       "tools": ["React", "Sass"],
-      "likedBy": []
+      "likedBy": [],
+      "salary": "Competitive salary",
+      "dutiesAndRoles": [
+        "Assist in developing and maintaining frontend components of web applications.",
+        "Collaborate with the development team to implement user interfaces.",
+        "Write clean and efficient code using JavaScript, React, and Sass.",
+        "Fix frontend issues and bugs as required."
+      ],
+      "qualifications": [
+        "Bachelor's degree in Computer Science or a related field (or equivalent work experience)."
+      ],
+      "skillsRequired": [
+        "Proficient in JavaScript for frontend development.",
+        "Knowledge of frontend frameworks, particularly React.",
+        "Experience with CSS preprocessors like Sass.",
+        "Strong problem-solving skills and attention to detail."
+      ],
+      "requiredExperienceAndKnowledge": [
+        "Some experience or internships in frontend development.",
+        "Passion for learning and growing as a frontend developer."
+      ]
     }
   ],
   "users": [

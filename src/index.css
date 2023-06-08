@@ -55,4 +55,12 @@
   .clear-button {
     @apply text-[15px] ml-auto text-primary-600 transition-all hover:underline hover:text-primary;
   }
+
+  .nav-link {
+    @apply text-white font-semibold text-lg transition-all hover:text-primary-700;
+  }
+
+  .search-input {
+    @apply px-2 py-1 border border-gray-300 rounded w-full md:w-1/2 bg-primary-300;
+  }
 }

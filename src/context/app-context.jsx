@@ -11,6 +11,8 @@ const AppContext = createContext({
   onClearFilters: () => {},
   onClearFilter: () => {},
   onLogout: () => {},
+  searchTerm: '',
+  onSearch: () => {},
 });
 
 const AppProvider = ({ children }) => {
@@ -18,6 +20,7 @@ const AppProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
   const [userDetails, setUserDetails] = useState();
   const [filters, setFilters] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     fetch('http://localhost:8001/jobs')
@@ -62,10 +65,18 @@ const AppProvider = ({ children }) => {
     setUserDetails(null);
   };
 
+  const onSearch = word => {
+    setSearchTerm(word);
+  };
+
+  const searchedJobs = jobListings.filter(job =>
+    job.position.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <AppContext.Provider
       value={{
-        jobListings,
+        jobListings: searchedJobs,
         users,
         userDetails,
         onLogin,
@@ -75,6 +86,8 @@ const AppProvider = ({ children }) => {
         onClearFilters,
         onClearFilter,
         onLogout,
+        onSearch,
+        searchTerm,
       }}
     >
       {children}

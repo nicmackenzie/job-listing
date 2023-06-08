@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import './index.css';
 import { AppProvider } from './context/app-context';
+import JobDetails from './components/JobDetails';
 
 // APP ROUTES
 // for clarification on how to create routes in version 6,click👉 https://reactrouter.com/en/main/start/tutorial
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: 'jobs/new',
         element: <NewJob />,
+      },
+      {
+        path: 'jobs/:id',
+        element: <JobDetails />,
       },
     ],
   },

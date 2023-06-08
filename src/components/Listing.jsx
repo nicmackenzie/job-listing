@@ -8,10 +8,7 @@ function Listing({ job }) {
     onAddFilter(e.target.textContent);
   };
   return (
-    <Link
-      className="card transition-all hover:scale-105"
-      to={'/jobs/' + job.id}
-    >
+    <div className="card">
       <div className="flex gap-4 items-center">
         <img
           src={job.logo}
@@ -30,25 +27,33 @@ function Listing({ job }) {
           </div>
         </div>
       </div>
-      <div className="flex gap-2 items-center flex-wrap">
-        <span className="filter-pills role" onClick={clickHandler}>
-          {job.role}
-        </span>
-        <span className="filter-pills level" onClick={clickHandler}>
-          {job.level}
-        </span>
-
-        {job.languages.map(language => (
-          <span
-            className="filter-pills language"
-            key={language}
-            onClick={clickHandler}
-          >
-            {language}
+      <div className="flex flex-col gap-2">
+        <div className="flex gap-2 items-center flex-wrap">
+          <span className="filter-pills role" onClick={clickHandler}>
+            {job.role}
           </span>
-        ))}
+          <span className="filter-pills level" onClick={clickHandler}>
+            {job.level}
+          </span>
+
+          {job.languages.map(language => (
+            <span
+              className="filter-pills language"
+              key={language}
+              onClick={clickHandler}
+            >
+              {language}
+            </span>
+          ))}
+        </div>
+        <Link
+          to={'/jobs/' + job.id}
+          className="btn self-end py-1 text-primary border border-solid border-primary rounded transition-all hover:text-white hover:bg-primary-600 hover:border-primary-600"
+        >
+          View Details
+        </Link>
       </div>
-    </Link>
+    </div>
   );
 }
 

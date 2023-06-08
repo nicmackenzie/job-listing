@@ -73,10 +73,26 @@ const AppProvider = ({ children }) => {
     job.position.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  const filteredJobs = searchedJobs.filter(job => {
+    let count = 0;
+    for (let i = 0; i < filters.length; i++) {
+      if (
+        job.languages.includes(filters[i]) ||
+        job.role === filters[i] ||
+        job.level === filters[i]
+      ) {
+        count++;
+      }
+    }
+    if (filters.length == count) {
+      return job;
+    }
+  });
+
   return (
     <AppContext.Provider
       value={{
-        jobListings: searchedJobs,
+        jobListings: filteredJobs,
         users,
         userDetails,
         onLogin,

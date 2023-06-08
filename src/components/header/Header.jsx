@@ -15,6 +15,7 @@
 
 import Navbar from '../navbar/Navbar';
 import Filters from '../ui/Filters';
+import SearchBar from './SearchBar';
 // import Filters from '../ui/Filters.jsx'
 
 function Header({ user, filters, onClear }) {
@@ -23,7 +24,9 @@ function Header({ user, filters, onClear }) {
       <Navbar user={user} />
       {Filters.length > 0 && <Filters filters={filters} onclear={onClear} />}
       {/* after this we will render the search and filters component once they finish working on them */}
+      <SearchBar />
     </header>
+
   );
 }
 

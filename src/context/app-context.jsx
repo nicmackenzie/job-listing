@@ -1,4 +1,5 @@
 import { useState, useEffect, createContext } from 'react';
+import axios from 'axios';
 
 const AppContext = createContext({
   jobListings: [],
@@ -23,13 +24,23 @@ const AppProvider = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:8001/jobs')
-      .then(rs => rs.json())
-      .then(jobs => setJobListings(jobs));
+    if (import.meta.env.DEV) {
+      fetch('http://localhost:8001/jobs')
+        .then(rs => rs.json())
+        .then(jobs => setJobListings(jobs));
 
-    fetch('http://localhost:8001/users')
-      .then(rs => rs.json())
-      .then(users => setUsers(users));
+      fetch('http://localhost:8001/users')
+        .then(rs => rs.json())
+        .then(users => setUsers(users));
+    } else {
+      axios
+        .get('https://api.jsonbin.io/v3/b/6481a1818e4aa6225eab0a5e')
+        .then(data => setJobListings(data.data.record.jobs));
+
+      axios
+        .get('https://api.jsonbin.io/v3/b/6481a1818e4aa6225eab0a5e')
+        .then(data => setUsers(data.data.record.users));
+    }
   }, []);
 
   const onLogin = user => {

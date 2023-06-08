@@ -77,3 +77,17 @@ function JobDetails() {
             {job.qualifications.map(qualification => (
               <p key={qualification}>- {qualification}</p>
             ))}
+             <h3 className="underline text-3xl font-bold mb-3 text-primary mt-12">
+              Minimum Requirements
+            </h3>
+            {job.requiredExperienceAndKnowledge.map(skill => (
+              <p key={skill}>- {skill}</p>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default JobDetails;

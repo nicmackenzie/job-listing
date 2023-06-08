@@ -24,7 +24,7 @@ const AppProvider = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    if (import.meta.env.DEV) {
+    if (import.meta.env.VITE_REACT_APP_ENV === 'development') {
       fetch('http://localhost:8001/jobs')
         .then(rs => rs.json())
         .then(jobs => setJobListings(jobs));

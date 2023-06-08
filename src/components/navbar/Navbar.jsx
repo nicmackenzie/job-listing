@@ -56,6 +56,13 @@ function Navbar({ user, onLogout }) {
             </button>
           </div>
         )}
+        {user && user.role === 'user' && (
+          <div className="flex gap-4">
+            <button className="nav-link" onClick={onLogout}>
+              Logout
+            </button>
+          </div>
+        )}
       </ul>
     </nav>
   );

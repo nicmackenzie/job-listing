@@ -7,7 +7,7 @@ function Header({ user, filters, onClear, onLogout, onSearch, searchTerm }) {
     <header className="-full h-36 bg-primary p-4">
       <Navbar user={user} onLogout={onLogout} />
       <SearchBar onSearch={onSearch} searchTerm={searchTerm} />
-      {filters.length > 0 && <Filters filters={filters} onclear={onClear} />}
+      {filters.length > 0 && <Filters filters={filters} onClear={onClear} />}
     </header>
   );
 }

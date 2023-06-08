@@ -14,19 +14,15 @@
 // Will use condition rendering to  display the <Filters /> component based on if the filters prop, which is an array, has any elements, i.e if filters.length > 0. We are doing this so that the <Filter /> component is only displayed when filters are applied.
 
 import Navbar from '../navbar/Navbar';
-import Filters from '../ui/Filters';
-import SearchBar from './SearchBar';
-// import Filters from '../ui/Filters.jsx'
+import Filters from '../ui/Filters.jsx';
 
-function Header({ user, filters, onClear }) {
+function Header({ user, filters, onClear, onLogout }) {
   return (
     <header className="-full h-36 bg-primary p-4">
-      <Navbar user={user} />
-      {Filters.length > 0 && <Filters filters={filters} onclear={onClear} />}
+      <Navbar user={user} onLogout={onLogout} />
+      {filters.length > 0 && <Filters filters={filters} onclear={onClear} />}
       {/* after this we will render the search and filters component once they finish working on them */}
-      <SearchBar />
     </header>
-
   );
 }
 

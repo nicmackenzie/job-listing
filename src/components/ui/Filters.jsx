@@ -2,7 +2,7 @@ import Filter from './Filter';
 
 function Filters({ filters, onClear }) {
   return (
-    <div className="filters-container">
+    <div className="filter-container">
       <div>
         {filters.map(filter => (
           <Filter key={filter} filter={filter} />

@@ -1,69 +1,59 @@
 import { Link } from 'react-router-dom';
 
-const links = [
-{
-  name: 'Home',
-  link: '/home'
- },
- {
-  name: 'About',
-  link: '/about'
- },
- {
-  name: 'Contact',
-  link: '/contact'
- },
- {
-  name: 'Blog',
-  link: '/blog'
- }
-]
+// const links = [
+//   {
+//     name: 'Home',
+//     link: '/home',
+//   },
+//   {
+//     name: 'About',
+//     link: '/about',
+//   },
+//   {
+//     name: 'Contact',
+//     link: '/contact',
+//   },
+//   {
+//     name: 'Blog',
+//     link: '/blog',
+//   },
+// ];
 
-
-function Navbar({ user }) {
-
+function Navbar({ user, onLogout }) {
   return (
-
     <nav className="flex">
       <ul className="flex gap-4 items-center justify-between w-full">
-      <div className='flex gap-4 items-center'>
-          {
-            links.map(link => (
-              <li key={link.name}>
-                <Link to={link.link}>{link.name}</Link>
-              </li>
-            ))
-          }
-         </div>
+        <div className="flex gap-4 items-center">
+          {/* {links.map(link => (
+            <li key={link.name}>
+              <Link to={link.link}>{link.name}</Link>
+            </li>
+          ))} */}
+        </div>
         {!user && (
-          <div className='flex gap-4'>
+          <div className="flex gap-4">
             <li>
-              <Link
-                to="/login"
-                className="text-white font-semibold text-lg transition-all hover:text-primary-700"
-              >
+              <Link to="/login" className="nav-link">
                 Login
               </Link>
             </li>
             <li>
-              <Link
-                to="/register"
-                className="text-white font-semibold text-lg transition-all hover:text-primary-700"
-              >
+              <Link to="/register" className="nav-link">
                 Register
               </Link>
             </li>
-            {user && user.role === 'employer' && (
-          <li>
-            <Link
-              className="text-white font-semibold text-lg transition-all hover:text-primary-700"
-              to="/jobs/new"
-            >
-              New Job
-            </Link>
-          </li>
+          </div>
         )}
-
+        {user && user.role === 'employer' && (
+          <div className="flex gap-4">
+            <li>
+              <Link className="nav-link" to="/jobs/new">
+                New Job
+              </Link>
+            </li>
+            <button className="nav-link" onClick={onLogout}>
+              Logout
+            </button>
           </div>
         )}
       </ul>
@@ -71,11 +61,4 @@ function Navbar({ user }) {
   );
 }
 
-
 export default Navbar;
-
-
-
-
-
-

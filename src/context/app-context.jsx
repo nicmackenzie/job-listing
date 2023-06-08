@@ -9,6 +9,8 @@ const AppContext = createContext({
   onAddFilter: () => {},
   onAddJob: () => {},
   onClearFilters: () => {},
+  onClearFilter: () => {},
+  onLogout: () => {},
 });
 
 const AppProvider = ({ children }) => {
@@ -49,6 +51,17 @@ const AppProvider = ({ children }) => {
     setFilters([]);
   };
 
+  const onClearFilter = filter => {
+    const i = filters.findIndex(elm => elm === filter);
+    const clonedFilters = [...filters];
+    clonedFilters.splice(i, 1);
+    setFilters(clonedFilters);
+  };
+
+  const onLogout = () => {
+    setUserDetails(null);
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -60,6 +73,8 @@ const AppProvider = ({ children }) => {
         filters,
         onAddJob,
         onClearFilters,
+        onClearFilter,
+        onLogout,
       }}
     >
       {children}

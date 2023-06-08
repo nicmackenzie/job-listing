@@ -50,3 +50,30 @@ function JobDetails() {
                 <span className="font-semibold">Salary:</span> {job.salary}.
               </div>
             </div>
+            <img
+              src={job.logo}
+              alt={job.company}
+              className="hidden lg:inline-flex w-32 h-32"
+            />
+          </div>
+          <div className="mt-6">
+            <h3 className="underline text-3xl font-bold mb-3 text-primary">
+              Duties and Responsibilities
+            </h3>
+            {job.dutiesAndRoles.map(duty => (
+              <p key={duty}>- {duty}</p>
+            ))}
+
+            <h3 className="underline text-3xl font-bold mb-3 text-primary mt-12">
+              Skills Required
+            </h3>
+            {job.skillsRequired.map(skill => (
+              <p key={skill}>- {skill}</p>
+            ))}
+
+            <h3 className="underline text-3xl font-bold mb-3 text-primary mt-12">
+              Qualifications
+            </h3>
+            {job.qualifications.map(qualification => (
+              <p key={qualification}>- {qualification}</p>
+            ))}
